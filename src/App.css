@@ -3,4 +3,50 @@
 
 * {
   font-family: "DM Sans", sans-serif;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-blue: #238FF4;
+  --color-grey: #454545;
+}
+
+.blue {
+  color: var(--color-blue);
+}
+
+.grey {
+  color: var(--color-grey);
+}
+
+
+@layer components {
+  .gradient-blue {
+    background: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
+
+  }
+
+  .light-gradient {
+    background: linear-gradient(180deg, rgba(95, 228, 255, 0.1) 0%, rgba(35, 143, 244, 0.1) 86.06%);
+  }
+}
+
+@layer utilities {
+  .shadow-hire {
+    box-shadow:
+      inset 2px 2px 2px 0px #97CDFF,
+      inset -2px -2px 2px 0px #97CDFF,
+      0px 8px 12px 0px #00000014;
+  }
+
+  .shadow-icon {
+    box-shadow:
+      inset 1.6px 1.6px 1.6px 0px #97CDFF,
+      inset -1.6px -1.6px 1.6px 0px #97CDFF,
+      0px 8px 12px 0px #00000014;
+  }
 }
