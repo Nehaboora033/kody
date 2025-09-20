@@ -1,5 +1,13 @@
 import { Figure_four, Figure_one, Figure_three, Figure_two, Insta, Linkedin, Real_Five, Real_Four, Real_one, Real_Six, Real_Three, Real_Two, Twitter } from "./icons";
 import rocket from '../assets/webp/rocket.webp'
+import Journey1 from '../assets/webp/ats.webp';
+import Journey2 from '../assets/webp/solutions.webp'
+import Journey3 from '../assets/webp/aws.webp'
+import Journey4 from '../assets/webp/ait.webp'
+import Journey5 from '../assets/webp/tech.webp'
+import Journey6 from '../assets/webp/IT.webp'
+import Journey7 from '../assets/webp/apple.webp'
+
 
 export const Social_Links = [
     Insta,
@@ -97,3 +105,55 @@ export const Tech = [
     },
 ];
 
+export const Journey_Data = [
+    {
+        image: Journey1,
+        description: 'CTO / Architect / Founder',
+    },
+    {
+        image: Journey2,
+        description: 'VP of Product Dev. & Technical Director',
+    },
+    {
+        image: Journey3,
+        description: 'Sr. DevOps Engineer',
+    },
+    {
+        image: Journey4,
+        description: 'Sr. Systems Engineer',
+    },
+    {
+        image: Journey5,
+        description: 'Linux Admin & DevOps',
+    },
+    {
+        image: Journey6,
+        description: 'IT Technician 4',
+    },
+    {
+        image: Journey7,
+        description: 'Technical Support & Genius',
+    },
+]
+
+export const Current_Data = [
+    {
+        validity: '4 hours/month',
+        price: '$1,800',
+        description: 'Perfect for quick consultations, strategic guidance, or periodic check-ins. Ideal for founders who need a seasoned CTO’s insight without a long-term commitment.',
+
+    },
+    {
+        validity: '10 hours/month',
+        price: '$4,000',
+        description: 'A balance of strategy and hands-on execution. Designed for startups scaling quickly and needing consistent CTO involvement to manage infrastructure, optimize costs, and guide teams.',
+
+    },
+    {
+        validity: '20 hours/month',
+        price: '$7,000',
+        description: 'Ready to level up fast. Full CTO advisory plus hands-on leadership to guide engineering teams, implement complex systems, and drive major product milestones.',
+    },
+]
+
+ 

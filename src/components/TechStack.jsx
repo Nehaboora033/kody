@@ -4,7 +4,7 @@ import { Tech } from '../utils/helper'
 
 const TechStack = () => {
   return (
-    <div className='max-w-[1164px] mx-auto px-3 '>
+    <div className='max-w-[1164px] mx-auto px-3 mb-[90px] '>
       <Subheading className={'text-center mb-[60px]'}>
         TECH STACK
       </Subheading>
