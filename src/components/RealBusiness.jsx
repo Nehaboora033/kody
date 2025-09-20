@@ -6,7 +6,7 @@ import Description from './common/Description'
 const RealBusiness = () => {
   return (
     <div className='max-w-[1164px] px-3 mx-auto'>
-      <Subheading className={'text-center '}>
+      <Subheading className={'text-center mb-[60px]'}>
         Real Business Impact
       </Subheading>
       <div className='max-w-[1116px] px-3'>

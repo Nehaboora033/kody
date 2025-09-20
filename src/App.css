@@ -33,20 +33,29 @@ html {
   .light-gradient {
     background: linear-gradient(180deg, rgba(95, 228, 255, 0.1) 0%, rgba(35, 143, 244, 0.1) 86.06%);
   }
+
+
 }
 
 @layer utilities {
   .shadow-hire {
     box-shadow:
       inset 2px 2px 2px 0px #97CDFF,
-      inset -2px -2px 2px 0px #97CDFF,
-      0px 8px 12px 0px #00000014;
+      inset -2px -2px 2px 0px #238FF97C,
+      0px 8px 12px 0px #4F4F4F14;
   }
 
   .shadow-icon {
     box-shadow:
       inset 1.6px 1.6px 1.6px 0px #97CDFF,
-      inset -1.6px -1.6px 1.6px 0px #97CDFF,
-      0px 8px 12px 0px #00000014;
+      inset -1.6px -1.6px 1.6px 0px #238FF97C,
+      0px 8px 12px 0px #4F4F4F14;
+  }
+
+  .shadow-box {
+    box-shadow:
+      inset 1.6px 1.6px 1.6px -1.6px #97CDFF,
+      inset -1.6px -1.6px 1.6px -1.6px #238FF97C,
+      0px 8px 12px 0px #4F4F4F14;
   }
 }
