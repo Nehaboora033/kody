@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Subheading from './common/Subheading'
 import { Bussiness_Data } from '../utils/helper'
 import Description from './common/Description'
 
 const RealBusiness = () => {
   return (
-    <div className='max-w-[1164px] px-3 mx-auto'>
+    <div className='max-w-[1164px] px-3 mx-auto mt-[150px]'>
       <Subheading className={'text-center mb-[60px]'}>
         Real Business Impact
       </Subheading>
@@ -15,9 +15,12 @@ const RealBusiness = () => {
           {Bussiness_Data.slice(0, 4).map((item, index) => (
             <div key={index} className="flex flex-col items-center">
               <div className="size-[64px] rounded-full flex items-center justify-center shadow-icon light-gradient">
-                <item.icon />
+                {/* Blue in light, gray in dark */}
+                <item.icon color="var(--color-icon)" />
               </div>
-              <Description className="mt-4 text-center grey !text-[20px]">{item.description}</Description>
+              <Description className="mt-4 text-center grey !text-[20px]">
+                {item.description}
+              </Description>
             </div>
           ))}
           {/* Second row: indexes 4-5, placed exactly under middle columns */}
@@ -29,7 +32,7 @@ const RealBusiness = () => {
               style={{ gridColumn: index === 0 ? '2 / 3' : '3 / 4' }}
             >
               <div className="size-[64px] rounded-full flex items-center justify-center shadow-icon light-gradient">
-                <item.icon />
+                <item.icon color="var(--color-icon)" />
               </div>
               <Description className="mt-4 text-center !text-[20px] grey">{item.description}</Description>
             </div>

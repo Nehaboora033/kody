@@ -10,39 +10,26 @@ html {
   scroll-behavior: smooth;
 }
 
-@theme {
-  --color-blue: #238FF4;
-  --color-grey: #454545;
-}
-
-.blue {
-  color: var(--color-blue);
-}
-
-.grey {
-  color: var(--color-grey);
-}
-
-
-@layer components {
-  .gradient-blue {
-    background: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
-
-  }
-
-  .light-gradient {
-    background: linear-gradient(180deg, rgba(95, 228, 255, 0.1) 0%, rgba(35, 143, 244, 0.1) 86.06%);
-  }
-
-
-}
-
 @layer utilities {
+  .shadow-avail {
+    box-shadow:
+      inset 2px 2px 2px 0px #97CDFF,
+      inset -2px -2px 2px 0px #238FF97C,
+      0px 8px 12px 0px #4F4F4F14;
+  }
+
   .shadow-hire {
     box-shadow:
       inset 2px 2px 2px 0px #97CDFF,
       inset -2px -2px 2px 0px #238FF97C,
       0px 8px 12px 0px #4F4F4F14;
+  }
+
+  .dark .shadow-hire {
+    box-shadow:
+      inset 2px 2px 2px 0px #F0F0F07C,
+      inset -2px -2px 2px 0px #F0F0F07C,
+      0px 8px 12px 0px #FFFFFF14;
   }
 
   .shadow-icon {
@@ -52,10 +39,59 @@ html {
       0px 8px 12px 0px #4F4F4F14;
   }
 
-  .shadow-box {
+  .dark .shadow-icon {
+    box-shadow:
+      inset 2px 2px 2px -2px #F0F0F07C,
+      inset -2px -2px 2px -2px #F0F0F07C,
+      0px 8px 12px 0px #FFFFFF14;
+  }
+
+  .shadow-logo {
+    box-shadow:
+      inset 2px 2px 2px 0px #FFFFFF,
+      inset -2px -2px 2px 0px #FFFFFF,
+      0px 8px 12px 0px #4F4F4F14;
+  }
+
+  .shadow-figure {
     box-shadow:
       inset 1.6px 1.6px 1.6px -1.6px #97CDFF,
       inset -1.6px -1.6px 1.6px -1.6px #238FF97C,
       0px 8px 12px 0px #4F4F4F14;
   }
+
+  .dark .shadow-figure {
+    box-shadow:
+      inset 2px 2px 3px -2px #F0F0F07C,
+      inset -2px -2px 3px -2px #F0F0F07C,
+      0px 8px 12px 0px #FFFFFF05;
+  }
+
+  .shadow-journey {
+    box-shadow:
+      inset 1.6px 1.6px 1.6px -1.6px #97CDFF,
+      inset -1.6px -1.6px 1.6px -1.6px #238FF97C,
+      0px 8px 12px 0px #4F4F4F14;
+  }
+
+  .shadow-current-middle {
+    box-shadow:
+      inset 0px 2px 6px -2px #5FE4FF,
+      inset 0px -2px 6px 0px #238FF4,
+      0px 8px 25px 0px #4F4F4F14;
+  }
+
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background: #D9D9D9;
+  /* color of inactive dots */
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
+  /* active dot color */
 }

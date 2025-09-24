@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
+      {/* <Hero /> */}
       <RealBusiness />
       <Leaders />
       <section id="experience">

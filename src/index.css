@@ -1,0 +1,86 @@
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+:root {
+    --bg-main: #ffffff;
+    --text-main: black;
+    --text-grey: #454545;
+    --bg-background: #F8F8F8;
+    --border-main: #E3E3E3;
+    --color-blue: #238FF4;
+    --color-icon: #238FF4;
+    --color-greycurrent: #454545;
+    --light-gradient: linear-gradient(180deg,
+            rgba(95, 228, 255, 0.1) 0%,
+            rgba(35, 143, 244, 0.1) 86.06%);
+
+    --grey-gradient: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
+
+    --blue-gradient:
+        linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
+    --text-gradient: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
+    --current-gradient: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
+
+
+}
+
+html.dark {
+    --bg-main: black;
+    --text-main: #EEECEC;
+    --text-grey: #EEECEC;
+    --bg-background: #151515;
+    --border-main: #2B2B2B;
+    --color-blue: #EEECEC;
+    --color-icon: #EEECEC;
+    --light-gradient: linear-gradient(180deg,
+            black 0%,
+            black 86.06%);
+    --grey-gradient: linear-gradient(180deg,
+            #5FE4FF0A 0%, #238FF40A 86.06%),
+        linear-gradient(0deg, #000000A6, #000000A6);
+    --text-gradient: #EEECEC;
+    --current-gradient: none;
+}
+
+.text-gradient {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.current-gradient {
+    background: var(--current-gradient);
+}
+
+.blue-gradient {
+    background: var(--blue-gradient);
+}
+
+.grey-gradient {
+    background: var(--grey-gradient);
+}
+
+.light-gradient {
+    background: var(--light-gradient);
+}
+
+.grey {
+    color: var(--text-grey);
+}
+
+
+.bg-color {
+    background-color: var(--bg-background);
+}
+
+.bordergrey {
+    border-color: var(--border-main);
+}
+
+.blue {
+    color: var(--color-blue);
+}

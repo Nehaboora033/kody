@@ -1,4 +1,4 @@
-import { Figure_four, Figure_one, Figure_three, Figure_two, Insta, Linkedin, Real_Five, Real_Four, Real_one, Real_Six, Real_Three, Real_Two, Twitter } from "./icons";
+import { Figure_four, Figure_one, Figure_three, Figure_two, Insta, Linkedin, Real_Four, Real_one, Real_Six, Real_Three, Real_Two, Twitter } from "./icons";
 import rocket from '../assets/webp/rocket.webp'
 import Journey1 from '../assets/webp/ats.webp';
 import Journey2 from '../assets/webp/solutions.webp'
@@ -7,6 +7,8 @@ import Journey4 from '../assets/webp/ait.webp'
 import Journey5 from '../assets/webp/tech.webp'
 import Journey6 from '../assets/webp/IT.webp'
 import Journey7 from '../assets/webp/apple.webp'
+import profile1 from '../assets/webp/profile1.webp'
+import profile2 from '../assets/webp/profile2.webp'
 
 
 export const Social_Links = [
@@ -40,7 +42,7 @@ export const Bussiness_Data = [
         description: 'Delivered 7-figure SaaS exit',
     },
     {
-        icon: Real_Five,
+        icon: Real_one,
         description: '8-Figure Staffing company exit',
     },
     {
@@ -156,4 +158,38 @@ export const Current_Data = [
     },
 ]
 
- 
+export const Leader_Data = [
+    {
+        profile: profile1,
+        description: 'Kody excels at solving complex problems, communicating clearly, and delivering under pressure. He has built platforms from scratch, led innovation in challenging markets, and added value as both a technologist and strategic partner. Thoughtful, hard-working, and committed to excellence — I highly recommend him.',
+        name: 'Ross O Rourke',
+        role: 'Former CEO, IC-1 Solutions',
+
+    },
+    {
+        profile: profile2,
+        description: 'Kody helped transform our start-up into a powerhouse that scaled to 200+ staff and $50M revenue in 2 years. He is a genius-level engineer and fantastic with people, leadership, and business outcomes. Ideal for any role requiring innovation, grit, and results.',
+        name: 'Adam kepper',
+        role: 'Founder, Jax Equity',
+    },
+    {
+        profile: profile1,
+        description: 'Kody excels at solving complex problems, communicating clearly, and delivering under pressure. He has built platforms from scratch, led innovation in challenging markets, and added value as both a technologist and strategic partner. Thoughtful, hard-working, and committed to excellence — I highly recommend him..',
+        name: 'Capro ella',
+        role: 'CEO',
+    },
+    {
+        profile: profile2,
+        description: 'Kody helped transform our start-up into a powerhouse that scaled to 200+ staff and $50M revenue in 2 years. He is a genius-level engineer and fantastic with people, leadership, and business outcomes. Ideal for any role requiring innovation, grit, and results.',
+        name: 'Ellot Hober',
+        role: 'Manager',
+    },
+    {
+        profile: profile1,
+        description: 'Kody excels at solving complex problems, communicating clearly, and delivering under pressure. He has built platforms from scratch, led innovation in challenging markets, and added value as both a technologist and strategic partner. Thoughtful, hard-working, and committed to excellence — I highly recommend him..',
+        name: 'Capro ella',
+        role: 'CEO',
+    },
+
+
+]

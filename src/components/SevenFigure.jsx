@@ -1,4 +1,3 @@
-// SevenFigure.jsx
 import React from 'react'
 import { Figure_Data } from '../utils/helper'
 import Subheading from './common/Subheading'
@@ -22,7 +21,7 @@ const SevenFigure = () => {
           }
           return (
             <div key={index} className="max-w-[370px] gap-y-[24px] flex flex-col">
-              <div className='gradient-blue rounded-[32px] py-[28px] px-[30px] shadow-icon backdrop-blur-[21.28px]'>
+              <div className='blue-gradient rounded-[32px] py-[28px] px-[30px] shadow-icon backdrop-blur-[21.28px]'>
                 <Subheading className="!text-[60px] text-white">{item.title}</Subheading>
                 <Description className="text-white mt-[24px]">{item.description}</Description>
               </div>
@@ -33,11 +32,11 @@ const SevenFigure = () => {
                   return (
                     <div
                       key={i}
-                      className="p-[20px] shadow-box light-gradient rounded-[32px] backdrop-blur-[21.28px] flex gap-[10px]"
+                      className="p-[20px] shadow-figure light-gradient rounded-[32px] backdrop-blur-[21.28px] flex gap-[10px]"
                     >
                       {/* ✅ prevent shrinking */}
-                      <div className="size-[64px] shrink-0 rounded-full light-gradient flex items-center justify-center">
-                        {Icon && <Icon className="w-6 h-6 text-gray-800" />}
+                      <div className="size-[64px] shrink-0 rounded-full light-gradient flex items-center justify-center shadow-figure">
+                        {Icon && <Icon className="w-6 h-6 text-gray-800" color="var(--color-icon)" />}
                       </div>
 
                       <div>
