@@ -1,121 +1,97 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import Heading from './common/Heading'
 import Description from './common/Description'
-import ai from '../assets/webp/ai.webp'
-import angular from '../assets/webp/angular.webp'
-import docker from '../assets/webp/doker.webp'
-import github from '../assets/webp/github.webp'
-import go from '../assets/webp/go.webp'
-import grok from '../assets/webp/grok.webp'
-import java from '../assets/webp/java.webp'
-import js from '../assets/webp/js.webp'
-import python from '../assets/webp/python.webp'
-import react from '../assets/webp/react.webp'
-import slack from '../assets/webp/slack.webp'
-import ts from '../assets/webp/ts.webp'
-import aws from '../assets/webp/awslogo.webp'
-import sql from '../assets/webp/sql.webp'
 import arrowbg from '../assets/webp/herobg-arrow.webp'
 import person from '../assets/webp/heroperson.webp'
+import { TechLogos } from '../utils/helper'
+import character from '../assets/webp/character.webp'
+import Button from './common/Button'
+import { HireMe_Icon } from '../utils/icons'
+import greyarrow from '../assets/webp/greyheroarrow.webp'
 
 const Hero = () => {
+  const [isDark, setIsDark] = useState(false)
+
+  // Detect dark mode
+  useEffect(() => {
+    const checkTheme = () =>
+      setIsDark(document.documentElement.classList.contains("dark"))
+
+    checkTheme()
+    const observer = new MutationObserver(checkTheme)
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
+
+    return () => observer.disconnect()
+  }, [])
   return (
-    <div className='max-w-[1164px] px-3 mx-auto mt-[23px] flex justify-between'>
-
-      {/* first part */}
-      <div className='flex relative'>
-        <div className='max-w-[359px] mt-[77px]'>
-          <Heading className={'uppercase mb-4'} >
-            <>
-              grow Fast, <span className='text-[#3CB2F9]' >Smart &</span> Secure.
-            </>
-          </Heading>
-          <Description className={'grey max-w-[300px]'}>
-            I help founders scale from zero to $50M, cut infrastructure costs, and ship world-class tech products.
-          </Description>
+    <div className='max-w-[1164px] px-3 mx-auto mt-[23px] relative '>
+      <div className='flex justify-between'>
+        {/* first part */}
+        <div className='max-w-[359px] relative flex'>
+          <div className='flex flex-col z-[6]'>
+            <Heading className={'uppercase mb-4'}>
+              <>
+                Grow Fast, <span className='text-[#43BCFA]'>Smart &</span> Secure.
+              </>
+            </Heading>
+            <Description className={'grey max-w-[300px]'}>
+              I help founders scale from zero to $50M, cut infrastructure costs, and ship world-class tech products.
+            </Description>
+          </div>
+          <div className='absolute -top-[50px] -right-[290px] z-[2]'>
+            <img src={isDark ? greyarrow : arrowbg} alt="arrow" className='w-full h-full ' />
+          </div>
         </div>
-        <img src={arrowbg} alt="arrow image" className='object-cover absolute w-[491px] top-[40px] -right-[220px]' />
+
+        {/* middle part  */}
+        <div className='flex-1 relative flex'>
+          <div className='size-[317px] blue-gradient rounded-full flex justify-end absolute right-[50px] blur-[150px]  z-[3]'></div>
+          <div className='flex z-[4] w-full justify-end'>
+            <img src={person} alt="imageperson" className='w-[424px] h-[645px]' />
+          </div>
+        </div>
+        {/* end part */}
+        <div className='max-w-[226px] '>
+          <h5 className='grey mb-[6px]'>Tech I Work With</h5>
+          <div className='relative'>
+            <div className='logo-gradient shadow-outline rounded-[32px] h-[403px] w-[226px] p-3 backdrop-blur-[44px] relative z-[1]'>
+              {TechLogos.map((logo, i) => (
+                <div
+                  key={i}
+                  className={`size-[52px] bg-main rounded-full p-[12px] backdrop-blur-[8.3px] shadow-logo flex items-center justify-center absolute  ${logo.className}`}>
+                  <img src={isDark ? logo.greysrc : logo.src} alt={logo.alt} />
+                </div>
+              ))}
+            </div>
+            <div className='size-[158px] blue-gradient rounded-full flex z-[0] absolute bottom-[-60px] right-[-40px]'></div>
+          </div>
+        </div>
       </div>
 
-      {/* second part  */}
-      <div className='flex '>
-        <div className='gradient-blue size-[371px] rounded-full blur-[288.2px] flex'> </div>
-        <img src={person} alt="person" className='w-[424px] h-[645px] flex z-[3]' />
-      </div>
+      {/* character div */}
 
-
-      {/* third part  */}
-      <div className='max-w-[226px]'>
-        <h5 className='grey mb-[6px]'>Tech I Work With</h5>
-        {/* logo box */}
-        <div className='shadow-box light-gradient rounded-[32px] h-[403px] w-[226px] p-3 backdrop-blur-[26.5px] relative z-[1]'>
-          <div>
-            {/* ai */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute top-[23px] left-[59px]'>
-              <img src={ai} alt="ai" />
+      <div className='flex justify-center'>
+        <div className='shadow-hire rounded-[400px] p-3 flex w-[800px] justify-between items-center shadow-hire backdrop-blur-[26.6px] mx-auto  absolute bottom-0 z-[5]'>
+          <div className='flex gap-[24px] items-center '>
+            <div className='rounded-full backdrop-blur-[10.4px] border-gradient size-[96px] charcter-gradient flex items-center justify-center '>
+              <img src={character} alt="profile" />
             </div>
-            {/* react */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute top-[28px] right-[10px]'>
-              <img src={react} alt="react" />
-            </div>
-            {/* python */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute top-[95px] left-[17px]'>
-              <img src={python} alt="python" />
-            </div>
-            {/* js */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute top-[140px] left-[78px]'>
-              <img src={js} alt="js" />
-            </div>
-            {/* docker */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute top-[135px] right-[27px]'>
-              <img src={docker} alt="docker" />
-            </div>
-            {/* go */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute top-[196px] right-[72px]'>
-              <img src={go} alt="go" />
-            </div>
-            {/* java */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute top-[205px] right-[5px]'>
-              <img src={java} alt="java" />
-            </div>
-            {/* ts */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute bottom-[81px] left-[43px]'>
-              <img src={ts} alt="ts" />
-            </div>
-            {/* angular */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute bottom-[91px] right-[61px]'>
-              <img src={angular} alt="angular" />
-            </div>
-            {/* slack */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute right-[12px] bottom-[42px]'>
-              <img src={slack} alt="slack" />
-            </div>
-            {/* github */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute bottom-[13px] right-[82px]'>
-              <img src={github} alt="github" />
-            </div>
-            {/* grok */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute bottom-[20px] left-[12px]'>
-              <img src={grok} alt="grok" />
-            </div>
-            {/* aql */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute top-[205px] left-[19px]'>
-              <img src={sql} alt="sql" />
-            </div>
-            {/* aws */}
-            <div className='size-[52px] bg-white rounded-full p-[12px] flex items-center justify-center absolute top-[75px] right-[62px]'>
-              <img src={aws} alt="aws" />
+            <div>
+              <p className='font-semibold text-[24px] mb-1'>SAMUEL "KODY" DOHERTY</p>
+              <p className='font-normal text-[16px] grey'>Ex-AWS, Apple, and two-time startup exit CTO.</p>
             </div>
           </div>
-          {/* blue circle */}
-          <div className='size-[158px] rounded-full gradient-blue flex  absolute -bottom-[70px] -right-[40px] z-[-0] '></div>
+          <Button className="text-white h-[52px] blue-gradient whitespace-nowrap !p-[14px] flex gap-2 !px-[32px] cursor-pointer gradient-btn shadow-hire">
+            Hire me
+            <HireMe_Icon />
+          </Button>
         </div>
-
-
       </div>
 
     </div>
-
   )
 }
 

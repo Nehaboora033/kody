@@ -11,6 +11,32 @@ html {
 }
 
 @layer utilities {
+
+  .border-gradient {
+    position: relative;
+    z-index: 0;
+  }
+
+  .border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    /* border thickness */
+    border-radius: inherit;
+    /* keep corners same as parent */
+    background: linear-gradient(180deg,
+        rgba(95, 228, 255, 0.32) 0%,
+        rgba(35, 143, 244, 0.32) 86.06%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+  }
+
   .shadow-avail {
     box-shadow:
       inset 2px 2px 2px 0px #97CDFF,
@@ -48,9 +74,23 @@ html {
 
   .shadow-logo {
     box-shadow:
-      inset 2px 2px 2px 0px #FFFFFF,
-      inset -2px -2px 2px 0px #FFFFFF,
-      0px 8px 12px 0px #4F4F4F14;
+      inset 2px 2px 2px 2px #FFFFFF,
+      inset -2px -2px 2px 2px #FFFFFF,
+      0px 8px 12px 0px #00000014;
+  }
+
+  .dark .shadow-logo {
+    box-shadow:
+      inset -2px -2px 2px 0px #F0F0F07C,
+      inset 2px 2px 2px 0px #F0F0F0,
+      0 8px 12px 0 #FFFFFF14;
+  }
+
+  .shadow-outline {
+    box-shadow:
+      inset -2px -2px 2px -2px #F0F0F07C,
+      inset 2px 2px 2px -2px #F0F0F0,
+      0 8px 12px 0 #FFFFFF14;
   }
 
   .shadow-figure {
@@ -81,6 +121,13 @@ html {
       0px 8px 25px 0px #4F4F4F14;
   }
 
+  .shadow-activeslide {
+    box-shadow:
+      inset 0px 2px 6px -2px #5FE4FF,
+      inset 0px -2px 6px 0px #238FF4,
+      0px 8px 25px 0px #FFFFFF14;
+  }
+
 }
 
 .mySwiper .swiper-pagination-bullet {
@@ -94,4 +141,38 @@ html {
 .mySwiper .swiper-pagination-bullet-active {
   background: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
   /* active dot color */
+}
+
+.dark .swiper-slide.swiper-slide-active {
+  box-shadow:
+    inset 0px 2px 6px -2px #5FE4FF,
+    inset 0px -2px 6px 0px #238FF4,
+    0px 8px 25px 0px #FFFFFF14;
+}
+
+:root .swiper-slide.swiper-slide-active {
+  position: relative;
+}
+
+:root .swiper-slide.swiper-slide-active::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  /* thickness of border */
+  border-radius: 32px;
+  background: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ✅ Dark theme active slide = box shadow */
+.dark .swiper-slide.swiper-slide-active::before {
+  content: none;
+  /* remove border in dark mode */
 }

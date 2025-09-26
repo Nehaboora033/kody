@@ -10,14 +10,13 @@ import LetsTalk from './components/LetsTalk'
 import Hireme from './components/Hireme'
 import Header from './components/common/Header'
 
-
 function App() {
 
 
   return (
     <>
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       <RealBusiness />
       <Leaders />
       <section id="experience">

@@ -15,14 +15,13 @@ body {
     --light-gradient: linear-gradient(180deg,
             rgba(95, 228, 255, 0.1) 0%,
             rgba(35, 143, 244, 0.1) 86.06%);
-
     --grey-gradient: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
-
-    --blue-gradient:
-        linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
+    --blue-gradient: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
     --text-gradient: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
     --current-gradient: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
-
+    --blueline-gradient: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
+    --logo-gradient: linear-gradient(180deg, rgba(95, 228, 255, 0.1) 0%, rgba(35, 143, 244, 0.1) 86.06%);
+    --character-gradient: linear-gradient(180deg, #5FE4FF 0%, #238FF4 86.06%);
 
 }
 
@@ -42,6 +41,25 @@ html.dark {
         linear-gradient(0deg, #000000A6, #000000A6);
     --text-gradient: #EEECEC;
     --current-gradient: none;
+    --blueline-gradient: #EEECEC;
+    --logo-gradient: #FFFFFF03;
+    --character-gradient: none:
+}
+
+.charcter-gradient {
+    background: var(--character-gradient);
+}
+
+.logo-gradient {
+    background: var(--logo-gradient);
+}
+
+.blueline-gradient {
+    background: var(--blueline-gradient);
+}
+
+.bg-main {
+    background: var(--bg-main);
 }
 
 .text-gradient {
@@ -71,7 +89,6 @@ html.dark {
 .grey {
     color: var(--text-grey);
 }
-
 
 .bg-color {
     background-color: var(--bg-background);

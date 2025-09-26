@@ -34,7 +34,7 @@ const Leaders = () => {
                 return (
                   <SwiperSlide
                     key={index}
-                    className="light-gradient pt-[96px] pb-[20px] pl-[20px] pr-[40px] rounded-[32px] shadow-hire  backdrop-blur-[21.4px] relative mt-[100px] mb-[76px] min-h-[310px] flex group "
+                    className="light-gradient pt-[96px] pb-[20px] pl-[20px] pr-[40px] rounded-[32px] shadow-hire  backdrop-blur-[21.4px] relative mt-[100px] mb-[76px] min-h-[310px] flex group"
                   >
                     <div className="absolute top-0 left-[25px] -translate-y-1/2 z-10 rounded-full p-[2px] group-[.swiper-slide-active]:bg-gradient-to-b from-[#5FE4FF] to-[#238FF4]">
                       <img

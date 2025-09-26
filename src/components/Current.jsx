@@ -50,7 +50,7 @@ const Current = () => {
             >
               {item.price}
             </p>
-
+            <div className={` w-[324px] h-[1px]  ${index === 1 ? 'bg-[#FEFEFE]' : 'blueline-gradient'} `}></div>
             <Description
               className={`
                 text-center leading-[170%] mt-4 

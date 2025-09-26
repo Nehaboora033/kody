@@ -9,7 +9,41 @@ import Journey6 from '../assets/webp/IT.webp'
 import Journey7 from '../assets/webp/apple.webp'
 import profile1 from '../assets/webp/profile1.webp'
 import profile2 from '../assets/webp/profile2.webp'
-
+import greyjourney1 from '../assets/webp/grey-journey1.webp'
+import greyjourney2 from '../assets/webp/grey-journey2.webp'
+import greyjourney3 from '../assets/webp/grey-journey3.webp'
+import greyjourney4 from '../assets/webp/grey-journey4.webp'
+import greyjourney5 from '../assets/webp/grey-journey5.webp'
+import greyjourney6 from '../assets/webp/grey-journey6.webp'
+import greyjourney7 from '../assets/webp/grey-journey7.webp'
+import ai from '../assets/webp/ai.webp'
+import angular from '../assets/webp/angular.webp'
+import docker from '../assets/webp/doker.webp'
+import github from '../assets/webp/github.webp'
+import go from '../assets/webp/go.webp'
+import grok from '../assets/webp/grok.webp'
+import java from '../assets/webp/java.webp'
+import js from '../assets/webp/js.webp'
+import python from '../assets/webp/python.webp'
+import react from '../assets/webp/react.webp'
+import slack from '../assets/webp/slack.webp'
+import ts from '../assets/webp/ts.webp'
+import aws from '../assets/webp/awslogo.webp'
+import sql from '../assets/webp/sql.webp'
+import greyai from '../assets/webp/greyai.webp'
+import greyangular from '../assets/webp/greyangular.webp'
+import greydocker from '../assets/webp/greydocker.webp'
+import greygithub from '../assets/webp/greygithub.webp'
+import greygo from '../assets/webp/greygo.webp'
+import greygrok from '../assets/webp/greygrok.webp'
+import greyjava from '../assets/webp/greyjava.webp'
+import greyjs from '../assets/webp/greyjs.webp'
+import greypython from '../assets/webp/greypython.webp'
+import greyreact from '../assets/webp/greyreact.webp'
+import greyslack from '../assets/webp/greyslack.webp'
+import greyts from '../assets/webp/greyts.webp'
+import greyaws from '../assets/webp/greyawslogo.webp'
+import greysql from '../assets/webp/greysql.webp'
 
 export const Social_Links = [
     Insta,
@@ -110,30 +144,37 @@ export const Tech = [
 export const Journey_Data = [
     {
         image: Journey1,
+        darkimage: greyjourney1,
         description: 'CTO / Architect / Founder',
     },
     {
         image: Journey2,
+        darkimage: greyjourney2,
         description: 'VP of Product Dev. & Technical Director',
     },
     {
         image: Journey3,
+        darkimage: greyjourney3,
         description: 'Sr. DevOps Engineer',
     },
     {
         image: Journey4,
+        darkimage: greyjourney4,
         description: 'Sr. Systems Engineer',
     },
     {
         image: Journey5,
+        darkimage: greyjourney5,
         description: 'Linux Admin & DevOps',
     },
     {
         image: Journey6,
+        darkimage: greyjourney6,
         description: 'IT Technician 4',
     },
     {
         image: Journey7,
+        darkimage: greyjourney7,
         description: 'Technical Support & Genius',
     },
 ]
@@ -190,6 +231,78 @@ export const Leader_Data = [
         name: 'Capro ella',
         role: 'CEO',
     },
-
-
 ]
+
+export const TechLogos = [
+    {
+        src: ai,
+        greysrc: greyai,
+        alt: "ai", className: "top-[23px] left-[59px]"
+    },
+
+    {
+        src: react,
+        greysrc: greyreact,
+        alt: "react", className: "top-[28px] right-[10px]"
+    },
+    {
+        src: python,
+        greysrc: greypython,
+        alt: "python", className: "top-[95px] left-[17px]"
+    },
+    {
+        src: js,
+        greysrc: greyjs,
+        alt: "js", className: "top-[140px] left-[78px]"
+    },
+    {
+        src: docker,
+        greysrc: greydocker,
+        alt: "docker", className: "top-[135px] right-[27px]"
+    },
+    {
+        src: go,
+        greysrc: greygo,
+        alt: "go", className: "top-[196px] right-[72px]"
+    },
+    {
+        src: java,
+        greysrc: greyjava,
+        alt: "java", className: "top-[205px] right-[5px]"
+    },
+    {
+        src: ts,
+        greysrc: greyts,
+        alt: "ts", className: "bottom-[81px] left-[43px]"
+    },
+    {
+        src: angular,
+        greysrc: greyangular,
+        alt: "angular", className: "bottom-[91px] right-[61px]"
+    },
+    {
+        src: slack,
+        greysrc: greyslack,
+        alt: "slack", className: "right-[12px] bottom-[42px]"
+    },
+    {
+        src: github,
+        greysrc: greygithub,
+        alt: "github", className: "bottom-[13px] right-[82px]"
+    },
+    {
+        src: grok,
+        greysrc: greygrok,
+        alt: "grok", className: "bottom-[20px] left-[12px]"
+    },
+    {
+        src: sql,
+        greysrc: greysql,
+        alt: "sql", className: "top-[205px] left-[19px]"
+    },
+    {
+        src: aws,
+        greysrc: greyaws,
+        alt: "aws", className: "top-[75px] right-[62px]"
+    },
+];
